@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Webcam : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Start is called before the first frame update //
     void Start()
     {
         WebCamTexture webcamTexture = new WebCamTexture();
