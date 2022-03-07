@@ -1,23 +1,21 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
 
 public class ChangeMaterials : MonoBehaviour
 {
 
     public Material[] mats;
+    
     public int number; 
-
     public int xe = 0;
 
     Renderer MatRend;
 
-    bool change = false;
-
     Camera mainCamera;
-    
-    public Text xtext;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +23,6 @@ public class ChangeMaterials : MonoBehaviour
         number = 1;
         MatRend = GetComponent<Renderer>();
         MatRend.sharedMaterial = mats[number];
-        xtext.GetComponent<UnityEngine.UI.Text>().text = "bim";
     }
 
     // Update is called once per frame
@@ -44,7 +41,6 @@ public class ChangeMaterials : MonoBehaviour
             number = 2;
         }
         MatRend.sharedMaterial = mats[number];
-        xtext.text = xe.ToString();
     }
 
     public void NextMaterial()
@@ -56,8 +52,8 @@ public class ChangeMaterials : MonoBehaviour
         else
         {
             number = 0;
-        }*/
-        change = true;
+        }// a mettre avec / et *
         xe++;
     }
 }
+*/
