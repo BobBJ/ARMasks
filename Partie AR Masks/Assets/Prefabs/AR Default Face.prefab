@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1398700570724087561}
   - component: {fileID: 4776195378669150564}
   - component: {fileID: 7001628427421165990}
-  - component: {fileID: 6016558433860178760}
   m_Layer: 0
   m_Name: AR Default Face
   m_TagString: Untagged
@@ -124,22 +123,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6016558433860178760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 600585949722619021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b38dbe9426f52522eafd8fc717e4c319, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mats:
-  - {fileID: 2100000, guid: aa6f3f308507388e5b841cdee8b13a96, type: 2}
-  - {fileID: 2100000, guid: 2aa606a061932d961b37bec03e23b6ff, type: 2}
-  - {fileID: 2100000, guid: 7858572e9c2618fa29e28f732ba4066f, type: 2}
-  number: 1
-  texnew: {fileID: 2800000, guid: 6c9f53c3fb1a2cfbeacb266d8b00bf49, type: 3}
-  xtext: {fileID: 4913886592897460419, guid: 0ceeb59f88d6b7af68a881a6479caff3, type: 3}
