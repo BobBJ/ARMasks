@@ -305,7 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FacePrefab: {fileID: 600585949722619021, guid: e849ed7d463e7394ca713773674fb966, type: 3}
-  m_MaximumFaceCount: 3
+  m_MaximumFaceCount: 1
 --- !u!114 &108311822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,6 +320,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faceTrackingToggle: {fileID: 396192395}
   swapFacesToggle: {fileID: 1854154136}
+  faceTrackingOn: 1
+  arsession: {fileID: 108311819}
   materials:
   - Material: {fileID: 2100000, guid: aa6f3f308507388e5b841cdee8b13a96, type: 2}
     Name: Human

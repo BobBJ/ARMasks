@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 
 [RequireComponent(typeof(ARFaceManager))]
-public class FaceToggler : MonoBehaviour 
+public class FaceToggler : MonoBehaviour
 {
     [SerializeField]
     private Button faceTrackingToggle;
@@ -12,29 +12,33 @@ public class FaceToggler : MonoBehaviour
     private Button swapFacesToggle;
 
     private ARFaceManager arFaceManager;
-    
-    private bool faceTrackingOn = true;
+
+    public bool faceTrackingOn = true;
 
     private int swapCounter = 0;
+
+    public ARSessionOrigin arsession;
+
+
 
     [SerializeField]
     public FaceMaterial[] materials;
 
-    void Awake() 
+    void Awake()
     {
         arFaceManager = GetComponent<ARFaceManager>();
-        
+
         faceTrackingToggle.onClick.AddListener(ToggleTrackingFaces);
         swapFacesToggle.onClick.AddListener(SwapFaces);
-
         arFaceManager.facePrefab.GetComponent<MeshRenderer>().material = materials[0].Material;
     }
 
-    void SwapFaces() 
-    { 
+    void SwapFaces()
+    {
+        arFaceManager.enabled = true;
         swapCounter = swapCounter == materials.Length - 1 ? 0 : swapCounter + 1;
-        
-        foreach(ARFace face in arFaceManager.trackables)
+
+        foreach (ARFace face in arFaceManager.trackables)
         {
             face.GetComponent<MeshRenderer>().material = materials[swapCounter].Material;
         }
@@ -42,16 +46,26 @@ public class FaceToggler : MonoBehaviour
         swapFacesToggle.GetComponentInChildren<Text>().text = $"Face Material ({materials[swapCounter].Name})";
     }
 
-    void ToggleTrackingFaces() 
-    { 
+    void ToggleTrackingFaces()
+    {
         faceTrackingOn = !faceTrackingOn;
 
-        foreach(ARFace face in arFaceManager.trackables)
+        /*foreach(ARFace face in arFaceManager.trackables)
         {
             face.enabled = faceTrackingOn;
+        }*/
+
+        //arsession.enabled = faceTrackingOn;
+
+        arFaceManager.enabled = faceTrackingOn;
+        foreach (ARFace face in arFaceManager.trackables)
+        {
+            face.GetComponent<MeshRenderer>().enabled = faceTrackingOn;
+            face.enabled = faceTrackingOn;
         }
-        
-        faceTrackingToggle.GetComponentInChildren<Text>().text = $"Face Tracking {(arFaceManager.enabled ? "Off" : "On" )}";
+
+
+        //faceTrackingToggle.GetComponentInChildren<Text>().text = $"Face Tracking {(arFaceManager.enabled ? "Off" : "On" )}";
     }
 
 }
