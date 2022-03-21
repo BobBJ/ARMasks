@@ -320,9 +320,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faceTrackingToggle: {fileID: 396192395}
   swapFacesToggle: {fileID: 1854154136}
+  addFace: {fileID: 75921510}
   initiateScreenshot: {fileID: 552029667}
   faceTrackingOn: 1
-  arsession: {fileID: 108311819}
   materials:
   - Material: {fileID: 2100000, guid: 2aa606a061932d961b37bec03e23b6ff, type: 2}
     Name: Fun
@@ -330,7 +330,6 @@ MonoBehaviour:
     Name: Human
   - Material: {fileID: 2100000, guid: 7858572e9c2618fa29e28f732ba4066f, type: 2}
     Name: Color
-  eyedropperCamera: {fileID: 963194227}
 --- !u!1 &223974226
 GameObject:
   m_ObjectHideFlags: 0

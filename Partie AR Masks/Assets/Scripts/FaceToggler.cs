@@ -14,6 +14,8 @@ public class FaceToggler : MonoBehaviour
     [SerializeField]
     private Button swapFacesToggle;
 
+    public Button addFace;
+
     public Button initiateScreenshot;
 
     private ARFaceManager arFaceManager;
@@ -63,12 +65,22 @@ public class FaceToggler : MonoBehaviour
         //faceTrackingToggle.GetComponentInChildren<Text>().text = $"Face Tracking {(arFaceManager.enabled ? "Off" : "On" )}";
     }
 
+    void ButtonsVisibility(bool hide)
+    {
+        swapFacesToggle.gameObject.SetActive(hide);
+        addFace.gameObject.SetActive(hide);
+        initiateScreenshot.gameObject.SetActive(hide);
+        faceTrackingToggle.gameObject.SetActive(hide);
+    }
+
     IEnumerator Screenshot()
     {
+        ButtonsVisibility(false);
         yield return new WaitForEndOfFrame();
         Texture2D texture = ScreenCapture.CaptureScreenshotAsTexture();
         byte[] bytes = texture.EncodeToPNG();
         NativeGallery.SaveImageToGallery(bytes, "AlbumTest", "TestImage" + DateTime.Now.ToString("t"), null);
+        ButtonsVisibility(true);
         //Object.Destroy(texture);
     }
 
