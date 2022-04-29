@@ -1,0 +1,137 @@
+{
+    "m_SelectedDeviceId": "R5CN315LN3D",
+    "m_SelectedPackage": {
+        "deviceId": "R5CN315LN3D",
+        "name": "com.DefaultCompany.ARmasks",
+        "processId": 7509,
+        "exited": false
+    },
+    "m_SelectedPriority": 1,
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "R5CN315LN3D",
+            "name": "com.DefaultCompany.ARmasks",
+            "processId": 27307,
+            "exited": true
+        },
+        {
+            "deviceId": "R5CN315LN3D",
+            "name": "com.DefaultCompany.ARmasks",
+            "processId": 4208,
+            "exited": true
+        },
+        {
+            "deviceId": "R5CN315LN3D",
+            "name": "com.DefaultCompany.ARmasks",
+            "processId": 21919,
+            "exited": true
+        },
+        {
+            "deviceId": "R5CN315LN3D",
+            "name": "com.DefaultCompany.ARmasks",
+            "processId": 24532,
+            "exited": true
+        },
+        {
+            "deviceId": "R5CN315LN3D",
+            "name": "com.DefaultCompany.ARmasks",
+            "processId": 30669,
+            "exited": true
+        },
+        {
+            "deviceId": "R5CN315LN3D",
+            "name": "android.process.media",
+            "processId": 5765,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CN315LN3D",
+            "name": "com.sec.android.app.launcher",
+            "processId": 2143,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CN315LN3D",
+            "name": "com.DefaultCompany.ARmasks",
+            "processId": 32296,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CN315LN3D",
+            "name": "com.DefaultCompany.ARmasks",
+            "processId": 1016,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CN315LN3D",
+            "name": "com.DefaultCompany.ARmasks",
+            "processId": 3655,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CN315LN3D",
+            "name": "com.DefaultCompany.ARmasks",
+            "processId": 5122,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CN315LN3D",
+            "name": "com.DefaultCompany.ARmasks",
+            "processId": 7509,
+            "exited": false
+        }
+    ],
+    "m_Tags": {
+        "m_Entries": [
+            {
+                "m_Name": "Filter by all listed tags",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "No Filter",
+                "m_Selected": true
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Tag Control...",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Unity",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "CRASH",
+                "m_Selected": false
+            }
+        ]
+    },
+    "m_MemoryViewerState": {
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "MemoryGroup": 2,
+        "Behavior": 0
+    },
+    "m_Filter": "",
+    "m_FilterIsRegularExpression": true,
+    "m_SymbolPaths": []
+}
