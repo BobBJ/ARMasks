@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R5CN315LN3D",
         "name": "com.DefaultCompany.ARmasks",
-        "processId": 7509,
+        "processId": 14319,
         "exited": false
     },
     "m_SelectedPriority": 1,
@@ -11,73 +11,73 @@
         {
             "deviceId": "R5CN315LN3D",
             "name": "com.DefaultCompany.ARmasks",
-            "processId": 27307,
+            "processId": 23009,
             "exited": true
         },
         {
             "deviceId": "R5CN315LN3D",
             "name": "com.DefaultCompany.ARmasks",
-            "processId": 4208,
+            "processId": 2478,
             "exited": true
         },
         {
             "deviceId": "R5CN315LN3D",
             "name": "com.DefaultCompany.ARmasks",
-            "processId": 21919,
+            "processId": 8201,
             "exited": true
         },
         {
             "deviceId": "R5CN315LN3D",
             "name": "com.DefaultCompany.ARmasks",
-            "processId": 24532,
+            "processId": 12104,
             "exited": true
         },
         {
             "deviceId": "R5CN315LN3D",
             "name": "com.DefaultCompany.ARmasks",
-            "processId": 30669,
+            "processId": 17211,
             "exited": true
-        },
-        {
-            "deviceId": "R5CN315LN3D",
-            "name": "android.process.media",
-            "processId": 5765,
-            "exited": false
         },
         {
             "deviceId": "R5CN315LN3D",
             "name": "com.sec.android.app.launcher",
-            "processId": 2143,
+            "processId": 2166,
             "exited": false
         },
         {
             "deviceId": "R5CN315LN3D",
             "name": "com.DefaultCompany.ARmasks",
-            "processId": 32296,
+            "processId": 18859,
             "exited": false
         },
         {
             "deviceId": "R5CN315LN3D",
             "name": "com.DefaultCompany.ARmasks",
-            "processId": 1016,
+            "processId": 23663,
             "exited": false
         },
         {
             "deviceId": "R5CN315LN3D",
             "name": "com.DefaultCompany.ARmasks",
-            "processId": 3655,
+            "processId": 27513,
             "exited": false
         },
         {
             "deviceId": "R5CN315LN3D",
             "name": "com.DefaultCompany.ARmasks",
-            "processId": 5122,
+            "processId": 30921,
             "exited": false
         },
         {
             "deviceId": "R5CN315LN3D",
             "name": "com.DefaultCompany.ARmasks",
-            "processId": 7509,
+            "processId": 9710,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CN315LN3D",
+            "name": "com.DefaultCompany.ARmasks",
+            "processId": 14319,
             "exited": false
         }
     ],

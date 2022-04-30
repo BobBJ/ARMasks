@@ -31,6 +31,8 @@ public class FaceToggler : MonoBehaviour
 
     public Button getSlack;
 
+    public Button setPicture;
+
     private ARFaceManager arFaceManager;
 
     public bool faceTrackingOn = true;
@@ -50,16 +52,8 @@ public class FaceToggler : MonoBehaviour
         initiateScreenshot.onClick.AddListener(TakeScreenShot);
         addFace.onClick.AddListener(LancerMainSend);
         getSlack.onClick.AddListener(downloadSlack);
+        setPicture.onClick.AddListener(mettrePython);
         arFaceManager.facePrefab.GetComponent<MeshRenderer>().material = materials[0].Material;
-        initFace();
-    }
-
-    void initFace()
-    {
-        ButtonsVisibility(false);
-        Texture2D texture = ScreenCapture.CaptureScreenshotAsTexture();
-        byte[] bytes = texture.EncodeToPNG();
-        NativeGallery.SaveImageToGallery(bytes, "AlbumTest", "ImageToUploadFaceTo", null);
         ButtonsVisibility(true);
     }
 
@@ -97,6 +91,8 @@ public class FaceToggler : MonoBehaviour
         addFace.gameObject.SetActive(hide);
         initiateScreenshot.gameObject.SetActive(hide);
         faceTrackingToggle.gameObject.SetActive(hide);
+        getSlack.gameObject.SetActive(hide);
+        //setPicture.gameObject.SetActive(hide);
     }
 
     IEnumerator Screenshot()
@@ -115,50 +111,6 @@ public class FaceToggler : MonoBehaviour
         StartCoroutine(Screenshot());
     }
 
-    void Send()
-    {
-
-        string path = Application.persistentDataPath + "/Exemple.txt";
-        SendMessage("Exemple.txt");
-        TextWriter tw = new StreamWriter(path, true);
-        tw.WriteLine("The next line!");
-        tw.Close();
-    }
-
-    void test()
-    {
-        //PickImage(20000000);
-        Debug.Log(Application.persistentDataPath);
-    }
-
-    void pyt()
-    {
-        var engine = Python.CreateEngine();
-        ICollection<string> searchPaths = engine.GetSearchPaths();
-
-        //Path to the folder of greeter.py
-        searchPaths.Add(Application.dataPath);
-        //Path to the Python standard library
-        searchPaths.Add(Application.dataPath + @"/Plugins/Lib/");
-        searchPaths.Add(Application.dataPath + @"/Plugins/Lib/slack");
-        searchPaths.Add(Application.dataPath + @"/Plugins/Lib/chardet");
-        searchPaths.Add(Application.dataPath + @"/Plugins/Lib/requests");
-        searchPaths.Add(Application.dataPath + @"/Plugins/Lib/certifi");
-        searchPaths.Add(Application.dataPath + @"/Plugins/Lib/urllib3");
-        engine.SetSearchPaths(searchPaths);
-        //Texture2D texture = ScreenCapture.CaptureScreenshotAsTexture();
-        //byte[] bytes = texture.EncodeToPNG();
-        string filePath = Application.dataPath + @"/Pictures/Lea.png";
-        string filePath2 = Application.dataPath + @"/Assets//Pictures/Lea.png";
-        string filePath3 = Application.dataPath;
-        string filePath4 = "/home/bbj/UNITY/PROJECTS/AR masks/Assets//Pictures/Lea.png";
-        byte[] bytes;
-        bytes = File.ReadAllBytes(filePath);
-        dynamic py = engine.ExecuteFile(Application.dataPath + @"/Scripts/Greeter2.py");
-        dynamic greeter = py.Greeter();
-        //Debug.Log(greeter.greet("test envoie unity"));
-        //Debug.Log(greeter.greet2("Check out my text file!", "test file", filePath, bytes));
-    }
     /* partie slack c#*/
 
     // main method with logic
@@ -206,7 +158,7 @@ public class FaceToggler : MonoBehaviour
         parameters["channels"] = channelId;
         string URI = "https://slack.com/api/files.list";
         string token = "xoxb-3395519405008-3365818003510-fAdY2xwMZNRAkebCtuWaQ5aZ";
-
+        string filePathAndroid = Application.persistentDataPath;
         String LinkFinal = "";
         String IDfile = "";
         using (WebClient wc = new WebClient())
@@ -215,6 +167,7 @@ public class FaceToggler : MonoBehaviour
             wc.Headers[HttpRequestHeader.Accept] = "application/json";
             wc.QueryString = parameters;
             String responseBytesS = wc.DownloadString(URI);
+            Debug.Log(responseBytesS);
             List<string> result = responseBytesS?.Split(new string[] {"id"}, StringSplitOptions.None).ToList();
             //List<string> result = responseBytesS?.Split("id", StringSplitOptions.None).ToList();
             List<string> resultsplit = result[result.Count - 1]?.Split(',').ToList();
@@ -242,22 +195,41 @@ public class FaceToggler : MonoBehaviour
             wc2.Headers[HttpRequestHeader.Accept] = "application/json";
             wc2.QueryString = parameters;
             String responseBytesS = wc2.DownloadString(URI);
+            Debug.Log(responseBytesS);
         }
 
         Console.Write(LinkFinal);
+        Debug.Log(LinkFinal);
 
-        Texture2D texture = new Texture2D(128, 128);
+        
 
         using (WebClient webClient = new WebClient())
         {
+            Texture2D texture = new Texture2D(128, 128);
             byte[] data = webClient.DownloadData(LinkFinal);
-            texture.LoadRawTextureData(data);
+            File.WriteAllBytes(filePathAndroid + "/testPython.png", data);
         }
 
 
-        materials[0].Material.SetTexture("testmat", texture);
+        //materials[0].Material.SetTexture("testmat", texture);
         
-        arFaceManager.facePrefab.GetComponent<MeshRenderer>().material = materials[0].Material;
+        //arFaceManager.facePrefab.GetComponent<MeshRenderer>().material = materials[0].Material;
+
+    }
+
+    void mettrePython()
+    {
+        string path = Application.persistentDataPath + "/testPython.png";
+        Texture2D texture = new Texture2D(2,2);
+        byte[] data = File.ReadAllBytes(path);
+        texture.LoadImage(data);
+        arFaceManager.enabled = true;
+        //swapCounter = swapCounter == materials.Length - 1 ? 0 : swapCounter + 1;
+
+        foreach (ARFace face in arFaceManager.trackables)
+        {
+            face.GetComponent<MeshRenderer>().material.mainTexture = texture;
+        }
 
     }
 
