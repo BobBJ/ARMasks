@@ -36,10 +36,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/Scripts/ChangeMaterials.cs" />
      <Compile Include="Assets/PythonExample.cs" />
      <Compile Include="Assets/Scripts/FaceToggler.cs" />
-     <Compile Include="Assets/Scripts/faceof.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/home/bbj/UNITY/2020.3.33f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

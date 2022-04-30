@@ -20,9 +20,3 @@ def greet2(text, file_name, file_bytes, file_type=None, title=None):
             },
             files={'file': file_bytes}).json()
             
-with open("images/Lea.png", "rb") as image:
-    f = image.read()
-    b = bytearray(f)
-print(greet2( 'getmyID.',
-  'DayAtTheBeach222456.jpg',
-  b))
