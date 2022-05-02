@@ -81,7 +81,8 @@ Pour utiliser pleinement l'application, il faut en plus du téléphone, utiliser
 
     Le masque personnalisé contient la tête entière et pas seulement la face :  
         - Le serveur de Slack étant un peu lent, quand l'utilisateur a acquérit la dernière image stockée dans Slack, il a obtenu celle non-traitée. 
-        Il faut attendre avant de relancer le download de cette image. Il est aussi possible que le script Python n'ait pas été lancé. Il n'y a donc pas d'image traitée à utiliser.
+        Il faut attendre avant de relancer le download de cette image. Il est aussi possible que le script Python n'ait pas été lancé. 
+        Il n'y a donc pas d'image traitée à utiliser.
     
 ## Créateurs
     
