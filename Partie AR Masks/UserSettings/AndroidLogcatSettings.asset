@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R5CN315LN3D",
         "name": "com.DefaultCompany.ARmasks",
-        "processId": 10604,
+        "processId": 23888,
         "exited": false
     },
     "m_SelectedPriority": 1,
@@ -54,6 +54,12 @@
             "deviceId": "R5CN315LN3D",
             "name": "com.DefaultCompany.ARmasks",
             "processId": 10604,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CN315LN3D",
+            "name": "com.DefaultCompany.ARmasks",
+            "processId": 23888,
             "exited": false
         }
     ],

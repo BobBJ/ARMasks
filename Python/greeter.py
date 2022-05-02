@@ -11,7 +11,7 @@ import glob
 import receiveslack
 import sendslack
 
-receiveslack.SendSlack()
+#receiveslack.SendSlack()
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor('predictor/shape_predictor_68_face_landmarks.dat')
 img = dlib.load_rgb_image('sample.jpg')
@@ -59,7 +59,7 @@ average_color = np.average(average_color_row, axis=0)
 
 LongOverLayX = LongueurY + 250
 
-LongOverLayY = LargeurX + 320
+LongOverLayY = LargeurX + 360
 
 d_img = np.ones((LongOverLayX, LongOverLayY, 3), dtype=np.uint8)
 d_img[:, :] = average_color
