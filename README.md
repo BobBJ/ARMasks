@@ -71,16 +71,16 @@ Pour utiliser pleinement l'application, il faut en plus du téléphone, utiliser
     
     Problèmes avec la clé ['files'] :
         - L'utilisateur a demandé à Python de rendre une image publique qui était déjà publique. 
-        C'est souvent dû à la latence du serveur Slack qui met un court laps de temps à détecter une nouvelle image
+          C'est souvent dû à la latence du serveur Slack qui met un court laps de temps à détecter une nouvelle image
     
     Problèmes d'index avec dlib : 
         - L'image utilisée est trop grosse (la face prend trop de place sur l'image). 
-        Souvent, c'est dû au fait que la face dans l'image source est trop proche de l'écran
+          Souvent, c'est dû au fait que la face dans l'image source est trop proche de l'écran
     
 ## Erreurs possibles avec le masque personnalisé
 
     Le masque personnalisé contient la tête entière et pas seulement la face :  
-        - Le serveur de Slack étant un peu lent, quand l'utilisateur a acquérit la dernière image stockée dans Slack, il a obtenu celle non-traitée. 
+        - Le serveur de Slack étant un peu lent, quand l'utilisateur a acquérit la dernière image stockée dans Slack, il a obtenu celle     non-traitée. 
         Il faut attendre avant de relancer le download de cette image. Il est aussi possible que le script Python n'ait pas été lancé. 
         Il n'y a donc pas d'image traitée à utiliser.
     
