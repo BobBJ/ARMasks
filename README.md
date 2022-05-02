@@ -14,7 +14,7 @@ Pour installer et faire fonctionner pleinement l'application. Il faut installer 
  
         /.vscode 		    Utile pour le debug de Visual studio code.
         /BackUpsAPK		Contient les apk antérieurs permettant d’installer l’application aux différentes étapes de son développement.
-    	/Partie AR Masks	S’occupe de la gestion des masques appliqués sur la tête de l’utilisateur.
+    /Partie AR Masks	S’occupe de la gestion des masques appliqués sur la tête de l’utilisateur.
 	    /Python			Gère les requêtes de communication entre le portable et le pc qui traite l’image.
 	    .gitignore		Exclu les librairies et les fichiers temporaires qu’Unity a besoin.
 	    sample.jpg		Utile pour de la sauvegarde.
