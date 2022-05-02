@@ -97,8 +97,8 @@ public class FaceToggler : MonoBehaviour
         yield return new WaitForEndOfFrame();
         Texture2D texture = ScreenCapture.CaptureScreenshotAsTexture();
         byte[] bytes = texture.EncodeToPNG();
-        NativeGallery.SaveImageToGallery(bytes, "AlbumTest", "TestImage" + DateTime.Now.ToString("t"), null);
         ButtonsVisibility(true);
+        NativeGallery.SaveImageToGallery(bytes, "AlbumTest", "TestImage" + DateTime.Now.ToString("t"), null);
     }
 
     void TakeScreenShot()
