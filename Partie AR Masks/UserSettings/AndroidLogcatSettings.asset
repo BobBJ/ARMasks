@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R5CN315LN3D",
         "name": "com.DefaultCompany.ARmasks",
-        "processId": 10992,
+        "processId": 28964,
         "exited": false
     },
     "m_SelectedPriority": 1,
@@ -48,6 +48,30 @@
             "deviceId": "R5CN315LN3D",
             "name": "com.DefaultCompany.ARmasks",
             "processId": 10992,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CN315LN3D",
+            "name": "com.DefaultCompany.ARmasks",
+            "processId": 16147,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CN315LN3D",
+            "name": "com.DefaultCompany.ARmasks",
+            "processId": 22713,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CN315LN3D",
+            "name": "com.DefaultCompany.ARmasks",
+            "processId": 23666,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CN315LN3D",
+            "name": "com.DefaultCompany.ARmasks",
+            "processId": 28964,
             "exited": false
         }
     ],

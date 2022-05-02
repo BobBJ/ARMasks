@@ -1,0 +1,14 @@
+Unity Editor version:    2020.3.33f1 (915a7af8b0d5)
+Branch:                  2020.3/staging
+Build type:              Release
+Batch mode:              YES
+System name:             Linux
+Distro version:          #123-Ubuntu SMP Fri Apr 8 09:10:54 UTC 2022
+Kernel version:          5.4.0-109-generic
+Architecture:            x86_64
+Available memory:        7652 MB
+Using pre-set license
+Pro License: NO
+Error opening default X display. You must have a valid X server running.
+
+(Unity:60526): Gtk-WARNING **: 16:38:36.413: cannot open display: :0

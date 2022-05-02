@@ -98,7 +98,7 @@ public class FaceToggler : MonoBehaviour
         Texture2D texture = ScreenCapture.CaptureScreenshotAsTexture();
         byte[] bytes = texture.EncodeToPNG();
         ButtonsVisibility(true);
-        NativeGallery.SaveImageToGallery(bytes, "AlbumTest", "TestImage" + DateTime.Now.ToString("t"), null);
+        NativeGallery.SaveImageToGallery(bytes, "AlbumTest", "TestImage" + DateTime.Now.ToString("t") + ".jpg", null);
     }
 
     void TakeScreenShot()
