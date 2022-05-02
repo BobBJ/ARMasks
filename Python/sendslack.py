@@ -4,7 +4,7 @@ import random
 import json
 #import urllib.request
 
-def greet2(text, file_name, file_bytes, file_type=None, title=None):
+def SendSlack(text, file_name, file_bytes, file_type=None, title=None):
         slack_token = 'xoxb-3395519405008-3365818003510-fAdY2xwMZNRAkebCtuWaQ5aZ'
         slack_channel = '#ar-masks-landmarks'
         slack_icon_emoji = ':see_no_evil:'

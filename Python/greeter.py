@@ -11,7 +11,7 @@ import glob
 import receiveslack
 import sendslack
 
-#receiveslack.SendSlack()
+receiveslack.GetSlack()
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor('predictor/shape_predictor_68_face_landmarks.dat')
 img = dlib.load_rgb_image('sample.jpg')
@@ -113,6 +113,6 @@ with open("images/resized_centered.png", "rb") as image:
     f = image.read()
     b = bytearray(f)
     
-sendslack.greet2( 'getmyID.',
+sendslack.SendSlack( 'getmyID.',
   'DayAtTheBeach222456.jpg',
   b)
