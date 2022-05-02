@@ -51,7 +51,7 @@ Pour utiliser pleinement l'application, il faut en plus du téléphone, utiliser
         * L'image est enregistré dans la gallerie. Elle nécessite une carte SD dans le téléphone
     
     Afficher un masque changeable sur la tête de l'utilisateur
-        * L'affichage est automatique lancé au démarrage de l'application
+        * L'affichage est automatiquement lancé au démarrage de l'application
             - Il peut être intérompu et relancé avec le bouton n°4
         * Le masque est interchangeable entre 3 masques prédéfinies avec le bouton n°5
         * L'utilisateur peut aussi choisir comme masque l'image qu'il a téléchargé précédement avec le bouton n°3
