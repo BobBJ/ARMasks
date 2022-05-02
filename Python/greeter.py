@@ -57,9 +57,23 @@ src_img = testimg[Y - miny, X - minx]
 average_color_row = np.average(src_img, axis=0)
 average_color = np.average(average_color_row, axis=0)
 
-LongOverLayX = LongueurY + 250
 
-LongOverLayY = LargeurX + 360
+imgtest = Image.open("images/resized.png")
+imgtest_w, imgtest_h = imgtest.size
+
+print("x = " )
+print(LongueurY)
+print("y = " )
+print(LargeurX)
+
+LongOverLayX = LongueurY + 300
+
+LongOverLayY = LargeurX + 300
+
+print("overlayX = ")
+print(LongOverLayX)
+print("overlayY = ")
+print(LongOverLayY)
 
 d_img = np.ones((LongOverLayX, LongOverLayY, 3), dtype=np.uint8)
 d_img[:, :] = average_color

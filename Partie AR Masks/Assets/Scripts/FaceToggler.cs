@@ -117,8 +117,6 @@ public class FaceToggler : MonoBehaviour
     IEnumerator MainSend()
     {
         NameValueCollection parameters = new NameValueCollection();
-
-        // put your token here
         string channelId = "C03AR3EGX54";
         string filePathAndroid = Application.persistentDataPath;
         parameters["channels"] = channelId;
@@ -155,25 +153,6 @@ public class FaceToggler : MonoBehaviour
         String IDfile = "";
         using (WebClient wc = new WebClient())
         {
-            /* wc.Headers[HttpRequestHeader.Authorization] = "Bearer " + tokenSlackAuth2;
-             wc.Headers[HttpRequestHeader.Accept] = "application/json";
-             wc.QueryString = parameters;
-             String responseBytesS = wc.DownloadString(URI);
-             List<string> result = responseBytesS?.Split(new string[] {"id"}, StringSplitOptions.None).ToList();
-             List<string> resultsplit = result[result.Count - 1]?.Split(',').ToList();
-             List<string> resultsplitID = resultsplit[0]?.Split('"').ToList();
-             List<string> resultsplitLinkDebut = resultsplit[19]?.Split(new string[] {"/files.slack.com\\/"}, StringSplitOptions.None).ToList();
-             List<string> resultsplitLinkMoyen = resultsplitLinkDebut[1]?.Split('\\').ToList();
-             List<string> resultsplitLinkPug = resultsplit[46]?.Split('-').ToList();
-             IDfile = resultsplitID[2];
-             String IDTeamUser = resultsplitLinkMoyen[1];
-             String NomFile = resultsplitLinkMoyen[3];
-             String Pug = resultsplitLinkPug[3];
-
-             String Link = "https://files.slack.com/files-pri" + IDTeamUser + NomFile + "?pub_secret=" + Pug;
-             LinkFinal = Link.Replace("\"", "");
-             Console.Write("\n");*/
-
             wc.Headers[HttpRequestHeader.Authorization] = "Bearer " + tokenSlackAuth2;
             wc.Headers[HttpRequestHeader.Accept] = "application/json";
             wc.QueryString = parameters;
