@@ -23,7 +23,7 @@ Pour installer et faire fonctionner pleinement l'application. Il faut installer 
 	
 ## Utilisation
 
-Pour utiliser pleinement l'application, il faut en plus du téléphone, utiliser un pc permettant d'executer le script python "greeter.py". Il permettra de traiter les images envoyées depuis le téléphone. Pour lancer le script, il faut se placer dans le dossier /Python de l'archive.
+Pour utiliser pleinement l'application, il faut en plus du téléphone, utiliser un pc permettant d'exécuter le script python "greeter.py". Il permettra de traiter les images envoyées depuis le téléphone. Pour lancer le script, il faut se placer dans le dossier /Python de l'archive.
 
 ## Aperçu de l'application mobile
 
@@ -42,7 +42,7 @@ Pour utiliser pleinement l'application, il faut en plus du téléphone, utiliser
 
 ![alt text](https://zupimages.net/up/22/18/6otk.png)	        5 - Bouton qui change le masque qui est sur la tête de l’utilisateur.
 
-![alt text](https://zupimages.net/up/22/18/6cyt.png)        	6 - Bouton qui permet de prendre une photo de la tête de l’utilisateur et la sauvegarder dans la galerie de son téléphone.
+![alt text](https://zupimages.net/up/22/18/6cyt.png)        	6 - Bouton qui permet de prendre une photo de la tête de l’utilisateur et de la sauvegarder dans la galerie de son téléphone.
 
     
 ## Fonctionnalitées et détails
@@ -52,18 +52,18 @@ Pour utiliser pleinement l'application, il faut en plus du téléphone, utiliser
     
     Afficher un masque changeable sur la tête de l'utilisateur
         * L'affichage est automatiquement lancé au démarrage de l'application
-            - Il peut être intérompu et relancé avec le bouton n°4
-        * Le masque est interchangeable entre 3 masques prédéfinies avec le bouton n°5
-        * L'utilisateur peut aussi choisir comme masque l'image qu'il a téléchargé précédement avec le bouton n°3
+            - Il peut être interrompu et relancé avec le bouton n°4
+        * Le masque est interchangeable entre 3 masques prédéfinis avec le bouton n°5
+        * L'utilisateur peut aussi choisir comme masque l'image qu'il a téléchargé précédemment avec le bouton n°3
             - Il faut qu'il ait au moins fait le processus de création de masque une fois
     
     Création d'un masque personnalisé et choix de ce masque
-        * Etape 1 ) L'utilisateur doit déja envoyer une photo contenant un visage avec le bouton n°1
+        * Etape 1 ) L'utilisateur doit déjà envoyer une photo contenant un visage avec le bouton n°1
             - Quand ce bouton est appuyé, il prendra une capture d'écran qu'il enverra au PC
         * Etape 2 ) L'utilisateur doit lancer le script de traitement d'image depuis le PC
             - Il faut attendre un court laps de temps avant de le lancer pour être sûr que le serveur a bien reçu l'image du téléphone
-        * Etape 3 ) L'utilisateur peut récupérer l'image traité avec le bouton n°2
-            - L'image est sauvegardé sur un fichier permanent, il peut donc garder en mémoire un masque personnalisé
+        * Etape 3 ) L'utilisateur peut récupérer l'image traitée avec le bouton n°2
+            - L'image est sauvegardée sur un fichier permanent, il peut donc garder en mémoire un masque personnalisé
         * Etape 4 ) L'utilisateur peut choisir d'utiliser le masque personnalisé reçu à la place du masque prédéfini avec le bouton n°3
         
 
@@ -73,12 +73,12 @@ Pour utiliser pleinement l'application, il faut en plus du téléphone, utiliser
         - L'utilisateur a demandé à Python de rendre une image publique qui était déjà publique. C'est souvent dû à la latence du serveur Slack qui met un court laps de temps à détecter une nouvelle image
     
     Problèmes d'index avec dlib : 
-        - L'image utilisé est trop grosse (la face prend trop de place sur l'image). Souvent c'est dû au fait que la face dans l'image source est trop proche de l'écran
+        - L'image utilisée est trop grosse (la face prend trop de place sur l'image). Souvent, c'est dû au fait que la face dans l'image source est trop proche de l'écran
     
 ## Erreurs possibles avec le masque personnalisé
 
     Le masque personnalisé contient la tête entière et pas seulement la face :  
-        - Le serveur de Slack étant un peu lent, quand l'utilisateur a acquérit la dernière image stockée dans Slack, il a obtenu celle non-traitée. Il faut attendre avant de relancer le download de cette image. Il est aussi possible que le script Python n'est pas été lancé. Il n'y a donc pas d'image traitée à utiliser.
+        - Le serveur de Slack étant un peu lent, quand l'utilisateur a acquérit la dernière image stockée dans Slack, il a obtenu celle non-traitée. Il faut attendre avant de relancer le download de cette image. Il est aussi possible que le script Python n'ait pas été lancé. Il n'y a donc pas d'image traitée à utiliser.
     
 ## Créateurs
     
