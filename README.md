@@ -6,7 +6,9 @@ Application mobile qui permet de transférer un visage sur la tête de l’utili
 
 Pour installer et faire fonctionner pleinement l'application. Il faut installer Python 3 ainsi que les dépendances sur un PC pour pouvoir lancer manuellement les traitements d'images
 ```bash
-    sudo pip3 install chardet requests random json Image numpy skimage collections dlib cv2 matplotlib.pyplot os glob 
+    sudo pip3 install chardet requests Image numpy dlib
+    python -m pip install -U scikit-image
+    pip install opencv-python matplotlib 
 ```
 
 ## Organisation de l'archive
